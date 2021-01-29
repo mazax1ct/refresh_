@@ -58,7 +58,6 @@
       </div>
       <div class="card__column">
         <div class="card__block">
-          <!--тут вставляется то что уже есть на сайте-->
           <p class="card__title">Краткие характеристики</p>
           <ul class="no-styled">
             <li>Процессор: Intel Core 2 Solo</li>
@@ -66,15 +65,19 @@
             <li>Накопитель: 250 Гб HDD</li>
             <li>Видеосистема: GMA 4500MHD</li>
             <li>ОС: Windows 7</li>
-            <li>Вес: 1.9 Кг</li>
+            <li>Вес: 1.9 кг</li>
           </ul>
           <br>
-          <p>Цена:<br> 9 900 руб.</p>
-          <input type="submit" class="btn btn-primary button button--green" value="Добавить в корзину" onclick="jQuery('#to').val('cart');">
-          <p>Количество на складе: 1 шт.</p>
-          <br>
-          <p>Причина уценки:<br> Имеются незначительные потертости и следы эксплуатации</p>
-          <!--тут вставляется то что уже есть на сайте-->
+          <p class="card__price"><span class="card__price-title">Цена:</span><br> 9 900 <span class="rub">руб.</span></p>
+          <input type="submit" class="card__buy-button" value="Добавить в корзину" onclick="jQuery('#to').val('cart');">
+          <p><span>Количество на складе:</span> 1 шт.</p>
+          <label class="card__checkbox">
+            <input type="checkbox">
+            <span class="card__checkbox-icon"></span>
+            <span class="card__checkbox-text">Сравнить</span>
+            <a class="card__checkbox-link" href="#">Перейти к сравнению</a>
+          </label>
+          <p class="card__reason"><span class="card__reason-title">Причина уценки:</span><br> Имеются незначительные потертости и следы эксплуатации</p>
         </div>
       </div>
       <div class="card__column card__column--big">
