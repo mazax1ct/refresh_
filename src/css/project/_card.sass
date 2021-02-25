@@ -54,7 +54,8 @@
       padding: 30px 40px
 
   &__slider
-    margin-bottom: 50px
+    @media(min-width: 768px)
+      margin-bottom: 50px
 
   &__title
     font-weight: 500
@@ -147,25 +148,45 @@
     color: #777
 
   &__pass
-    align-items: center
-    display: flex
-    flex-wrap: wrap
-    margin-bottom: -20px
-    margin-top: auto
+    &--mobile
+      margin-top: 20px
+
+      @media(min-width: 768px)
+        display: none
+
+    &--desktop
+      display: none
+      margin-top: auto
+      position: relative
+
+      @media(min-width: 768px)
+        display: block
+
+      .card__pass-print
+        bottom: 5px
+        left: auto
+        position: absolute
+        right: 0
+        top: auto
+
+      .card__pass-title
+        font-size: 26px
+        line-height: 1.6
+        padding-right: 170px
 
   &__pass-title
     font-size: 20px
     font-weight: 500
     margin-top: auto
     margin-right: auto
-    margin-bottom: 20px
-    padding-right: 15px
+    margin-bottom: 0
 
     @media(min-width: 1024px)
       font-size: 30px
 
     span
       color: #60B24D
+      display: block
 
   &__pass-print
     align-items: center
@@ -173,11 +194,18 @@
     color: #fff
     border-radius: 4px
     display: inline-flex
-    margin-bottom: 20px
+    font-size: 12px
+    float: right
     padding: 8px 16px
     text-decoration: none
     transition: background-color 0.3s
     vertical-align: middle
+
+    @media(min-width: 768px)
+      order: 2
+
+    @media(min-width: 1024px)
+      font-size: 16px
 
     &:hover,
     &:focus
@@ -192,7 +220,7 @@
   p
     margin-top: 0
 
-    &:last-child
+    //&:last-child
       margin-bottom: 0
 
   .no-styled
@@ -228,10 +256,13 @@
     padding-right: 20px
 
     @media(min-width: 768px)
-      width: 50%
+      width: 33.33333%
 
     &:nth-child(even)
       margin-right: -20px
+
+      @media(min-width: 768px)
+        margin-right: 0
 
   &__chars-title
     align-items: center
